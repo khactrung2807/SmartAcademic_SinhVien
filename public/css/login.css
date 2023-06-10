@@ -1,0 +1,214 @@
+:root {
+    --main-color: #2980b9;
+    --form-bg: rgba(197, 199, 111, 0.8);
+    --border-color: #2980b9;
+    --form-color: #0c0101de;
+    --form-input-bg: rgba(2,2,2,0.22);
+
+    --border-radius: 20px;
+    --form-logo-size: 200px;
+    --form-max-width: 500px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: turquoise;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+}
+
+
+
+.form {
+    padding: 50px 60px;
+    /* background-color: var(--form-bg); */
+    border-radius: var(--border-radius) ;
+    color: var(--form-color);
+    text-align: center;
+    width: 100%;
+    max-width: var(--form-max-width);
+   
+}
+.form-logo {
+    display: block;
+    margin-bottom: 50px;
+}
+.form-logo img {
+    width: var(--form-logo-size);
+}
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.form-input {
+    background-color: var(--form-input-bg);
+    border: 2px solid transparent;
+    height: 46px;
+    width: 100%;
+    position: relative;
+    color: var(--form-color);
+    border-radius: var(--border-radius);
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+.form-input::placeholder {
+    color : var(--form-color);
+}
+.form-input :focus{
+    border : 2px solid var(--border-color);
+}
+.form-input-icon {
+     position: absolute;
+     right: 10px;
+     top: 14px;
+     transform: scale(0);
+     transition: transform .3s ease-in-out ;
+}
+
+.form-input-icon.err {
+    color: #c0392b;
+}
+.form-input-icon.success {
+    color: #27ae60;
+}
+
+.form-input-err .form-input-icon.err,
+.form-input-success .form-input-icon.success {
+    transform: scale(1);
+}
+.form-input-err-msg {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #c0392b;
+}
+.form-group-checkbox {
+    text-align: left;
+}
+
+.form-group-checkbox input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.form-group-checkbox label{
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.form-group-checkbox label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: var(--form-input-bg);
+   
+}
+
+.form-group-checkbox label i {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    color: var(--main-color);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.form-group-checkbox input:checked + label i{
+    transform: scale(1);
+}
+.form-btn {
+    margin: 15px 0;
+    padding-top: 10px;
+    height: 46px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.form-txt a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .form {
+        height: 100vh;
+        width: 100%;
+        padding: 50px 30px;
+        border-radius: 0;
+    }
+}
+
+img.logo-form {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+}
+.text {
+    text-align: center;
+    
+}
+.text hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+ input [type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+ }
+ form input {
+    margin: 15px 0;
+    padding-top: 5px;
+    height: 46px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+ }
+ form input:hover {
+    background-color: var(--main-color);
+    color: #fff;
+ }

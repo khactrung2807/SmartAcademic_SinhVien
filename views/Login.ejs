@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+     <!--GOOGLE FONT-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+     <!--BOX ICONS-->
+     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+     <!--LOGIN CSS-->
+     <link rel="stylesheet" href="css/login.css">
+    <link rel='stylesheet', href='bootstrap/dist/css/bootstrap.min.css'>
+   
+     
+</head>
+<body style="background-image: url(img/bg.jpg);" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 bg-light text-dark" style=" border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+               
+                    <img src="img/logo.png" alt="com logo" class="logo-form">
+                
+                <span class="text">
+                    <p>Xin chào!</p>
+                    <p><b>Chào mừng bạn đến với hệ thống quản lý <br> đào tạo trực tuyến Smart Academic </b></p>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <hr  width="30%" align="center">
+                    &nbsp;
+                    &nbsp;
+                    <p><i>Design by TAHTeam </i></p>
+                    <hr  width="10%" align="center">
+                </span>
+            
+            </div>
+            <div class="col-sm-4 align-sefl-end" style=" border-radius: 20px; background-color: rgba(197, 199, 111, 0.8);" >
+                <div class="form" id="signin-form">
+                    <a href="#" class="form-logo">
+                        <img src="img/logo.png" alt="company logo">
+                    </a>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Tài Khoản" id="signin-email"> 
+                        <span class="form-input-icon err">
+                            <i class='bx bx-error-circle'></i>
+                        </span>
+                        <span class="form-input-icon success">
+                            <i class='bx bx-check-circle' ></i>
+                        </span>
+                        <span class="form-input-err-msg" data-err-for="signin-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Mật Khẩu" id="signin-password"> 
+                        <span class="form-input-icon err">
+                            <i class='bx bx-error-circle'></i>
+                        </span>
+                        <span class="form-input-icon success">
+                            <i class='bx bx-check-circle' ></i>
+                        </span>
+                        <span class="form-input-err-msg" data-err-for="signin-password"></span>
+                    </div>
+                    <div class="form-group form-group-checkbox">
+                        <input type="checkbox" name="remember" id="remember" checked="checked">
+                        <label for="remember">
+                            Nhớ mật khẩu
+                            <i class="bx bx-check"></i>
+                        </label>
+                    </div>
+                    <!-- <div class="form-btn" id="signin-btn"  > 
+                        <button>Đăng nhập</button> 
+                    </div> -->
+                   
+                        <form action="/home" method="POST" enctype="multipart/form-data"> 
+                        <input id="singin-btn" type="submit" value="Đăng Nhập">
+                    </form>
+               
+                    <span class="form-txt">
+                        <a href="pass">Quên mật khẩu?</a>
+                    </span>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+    
+ 
+
+        <!--LOGIN JS-->
+        <script src="../public/js/login.js"></script>
+        <script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')></script>
+</body>
+</html>
